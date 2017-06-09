@@ -32,6 +32,15 @@
       permission="zope2.View"
       />
 
+  <!-- Keynoter -->
+  <browser:page
+      name="view"
+      for="ploneconf2016.policy.content.keynoter.IKeynoter"
+      class="ploneconf2016.policy.content.keynoter.KeynoterView"
+      template="templates/person.pt"
+      permission="zope2.View"
+      />
+
   <!-- Presentation -->
   <browser:page
       name="view"

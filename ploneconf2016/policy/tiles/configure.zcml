@@ -29,4 +29,15 @@
     template="templates/presentation.pt"
     />
 
+  <plone:tile
+    name="ploneconf2017.keynoters"
+    title="Keynoters"
+    class=".keynoters.KeynotersTile"
+    schema=".keynoters.IKeynotersTile"
+    for="*"
+    add_permission="cmf.ModifyPortalContent"
+    permission="zope.Public"
+    template="templates/keynoters.pt"
+    />
+
 </configure>

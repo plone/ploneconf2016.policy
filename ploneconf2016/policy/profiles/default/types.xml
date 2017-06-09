@@ -8,6 +8,7 @@
   -->
 <object name="portal_types" meta_type="Plone Types Tool">
   <object name="person" meta_type="Dexterity FTI" />
+  <object name="keynoter" meta_type="Dexterity FTI" />
   <object name="presentation" meta_type="Dexterity FTI" />
   <object name="training_class" meta_type="Dexterity FTI" />
 </object>

@@ -34,7 +34,6 @@ setup(name='ploneconf2016.policy',
           'Products.QuickImporter',
           'plone.api',
           'collective.fbshare',
-          'Products.PloneHotfix20160419',
           'collective.relatedslider',
       ],
       entry_points="""
