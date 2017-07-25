@@ -1,7 +1,9 @@
 from plone import api
-from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
-from zope.schema.interfaces import IContextSourceBinder
 from zope.interface import directlyProvides
+from zope.schema.interfaces import IContextSourceBinder
+from zope.schema.vocabulary import SimpleTerm
+from zope.schema.vocabulary import SimpleVocabulary
+
 
 PRESENTATION_DURATION_TYPES = SimpleVocabulary(
     [SimpleTerm(value=u'LongTalk', title=u'Long Talk'),
@@ -30,7 +32,7 @@ AUDIENCE_TYPES = SimpleVocabulary(
 
 def persons(context):
     catalog = api.portal.get_tool('portal_catalog')
-    person_brains = catalog(portal_type='person', 
+    person_brains = catalog(portal_type='person',
                         sort_on='sortable_title',
                         sort_order='ascending')
     terms = []

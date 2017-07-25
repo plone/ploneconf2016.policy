@@ -45,6 +45,20 @@ class PresentationTile(Tile):
     def speaker(self):
         content = self.content_context
         speaker_uids = getattr(content, 'speaker', None)
+        if speaker_uids is None:
+            # We have a training
+            speaker_uids = getattr(content, 'instructor', None)
         if speaker_uids:
-            speakers = [uuidToObject(u) for u in speaker_uids]
-            return ', '.join(s.title for s in speakers if s)
+            return [uuidToObject(u) for u in speaker_uids]
+
+    def duration(self):
+        content = self.content_context
+        duration = getattr(content, 'duration', None)
+        if duration:
+            if duration == 'TwoDay':
+                return '2 days'
+            elif duration == 'OneDay':
+                return '1 day'
+            elif duration == 'HalfDay':
+                return '1/2 day'
+        return ''
