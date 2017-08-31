@@ -22,19 +22,19 @@ class PresentationView(DefaultView):
 
     def speakers(self):
         """ parse speaker set into something template can iterate over
-        """        
+        """
         speaker_set = self.context.speaker
         speakers = [api.content.get(UID=x) for x in speaker_set]
         speaker_data = []
         for x in speakers:
             scale_func = api.content.get_view(name='images', context=x, request=self.request)
             # scale choices are taken from portal_registry/edit/plone.allowed_sizes
-            scaled_image = getattr(x.aq_explicit, 'headshot', False) and scale_func.scale('headshot', scale='thumb')
+            scaled_image = getattr(x.aq_explicit, 'headshot', False) and scale_func.scale('headshot', width=150, height=150)
             if scaled_image:
-                tag = scaled_image.tag(css_class='headshotImage')
+                tag = scaled_image.tag(css_class='image-left')
             else:
                 tag = ''
-            speaker_data.append({'url':x.absolute_url(), 'name': x.title, 'headshot': tag})
+            speaker_data.append({'url': x.absolute_url(), 'name': x.title, 'headshot': tag})
         return speaker_data
 
     def vocab_title(self, values, vocab):

@@ -5,18 +5,19 @@
       metal:use-macro="context/main_template/macros/master">
 
 
-    <metal:block fill-slot="content-core">
-
-        <h4><b><span>Speaker: </span></b>
-            <span tal:repeat="speaker view/speakers">
-                <a href="#" tal:attributes="href speaker/url">${speaker/name}</a><span tal:condition="not:repeat/speaker/end">,</span>
-            </span>
-	    <figure class="headshotContainer">
-              <span tal:repeat="speaker view/speakers">
-		<img tal:replace="structure speaker/headshot" />
-              </span>
-	    </figure>
-        </h4>
+<metal:block fill-slot="content-core">
+  <div class="row talk">
+    <div class="col-xs-12">
+      <span tal:repeat="speaker view/speakers">
+		    <img class="image-left"
+             tal:replace="structure speaker/headshot" />
+      </span>
+      <div>
+        <h3>
+          <span tal:repeat="speaker view/speakers">
+            <a href="#" tal:attributes="href speaker/url">${speaker/name}</a><span tal:condition="not:repeat/speaker/end">, </span>
+          </span>
+        </h3>
         <h4 tal:condition="context/duration"><b>
             <span>Length: </span></b>
             <span>${python:view.vocab_title(context.duration, view.duration_vocab())}</span>
@@ -31,31 +32,38 @@
                 <span>${audience}</span><span tal:condition="not:repeat/audience/end">,</span>
             </span>
         </h4>
+      </div>
+    </div>
+    <div class="col-xs-12">
+      <div tal:condition="context/body" tal:content="structure context/body/output" ></div>
+    </div>
+    <div class="col-xs-12">
+    	<h4>
+        <strong>When:</strong>
+    	  <a href="" tal:omit-tag="not: here/schedule_url" tal:attributes="href here/schedule_url">
+    	    <span>From</span> <span tal:replace="structure view/w/IEventBasic.start/render" />
+    	    <span>to</span> <span tal:replace="structure view/w/IEventBasic.end/render" />
+    	  </a>
+    	</h4>
+    	<h4 tal:condition="view/w/IEventLocation.location">
+    	  <strong>Location:</strong> <span tal:replace="structure view/w/IEventLocation.location/render" />
+    	</h4>
+    </div>
+    <div class="col-xs-12">
+      <h4 tal:condition="context/slides_url"><b>
+          <a href="" tal:attributes="href here/slides_url" target="_blank">See the presentation slides</a>
+      </h4>
+      <div tal:condition="context/slides_embed" tal:replace="structure context/slides_embed">
+      </div>
 
-	<h4>
-	  <a href="" tal:omit-tag="not: here/schedule_url" tal:attributes="href here/schedule_url">
-	    <span>From</span> <span tal:replace="structure view/w/IEventBasic.start/render" /> 
-	    <span>to</span> <span tal:replace="structure view/w/IEventBasic.end/render" />
-	  </a>
-	</h4>
-	<h4>
-	  <span>Location:</span> <span tal:replace="structure view/w/IEventLocation.location/render" />
-	</h4>
+      <h4 tal:condition="context/video_url"><b>
+          <a href="" tal:attributes="href here/video_url" target="_blank">See the presentation video</a>
+      </h4>
+      <div tal:condition="context/video_embed" tal:replace="structure context/video_embed">
+      </div>
+    </div>
 
-        <div tal:condition="context/body" tal:content="structure context/body/output" ></div>
-
-        <h4 tal:condition="context/slides_url"><b>
-            <a href="" tal:attributes="href here/slides_url" target="_blank">See the presentation slides</a>
-        </h4> 
-        <div tal:condition="context/slides_embed" tal:replace="structure context/slides_embed">
-        </div> 
-
-        <h4 tal:condition="context/video_url"><b>
-            <a href="" tal:attributes="href here/video_url" target="_blank">See the presentation video</a>
-        </h4>
-        <div tal:condition="context/video_embed" tal:replace="structure context/video_embed">
-        </div> 
-
-    </metal:block>
+  </div>
+</metal:block>
 
 </html>
