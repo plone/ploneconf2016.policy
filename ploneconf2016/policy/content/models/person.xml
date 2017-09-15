@@ -39,5 +39,11 @@
       <required>False</required>
       <title>Github handle</title>
     </field>
+    <field name="email" type="zope.schema.TextLine"
+           indexer:searchable="true">
+      <description/>
+      <required>False</required>
+      <title>Email address</title>
+    </field>
   </schema>
 </model>

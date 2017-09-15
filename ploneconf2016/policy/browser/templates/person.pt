@@ -32,6 +32,10 @@
               </tal:twitter_github>
               <tal:github tal:condition="view/github_url"><span>Github: </span><span><a href="#" tal:attributes="href view/github_url" tal:content="view/github">[handle]: </a></span>
             </tal:github>
+              <tal:email tal:condition="view/can_view_email">
+		<span>&nbsp;</span><span> | <span>&nbsp;</span>
+		<span>Email: </span><span><a href="#" tal:attributes="href python:'mailto:'+context.email" tal:content="here/email">[email]</a></span>
+            </tal:email>
             </b>
           </h4>
           <tal:twitter_or_github tal:condition="view/twitter_or_github_exist"><div>&nbsp;</div></tal:twitter_or_github>
