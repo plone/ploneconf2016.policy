@@ -3,7 +3,7 @@
 <body>
 <article class="keynotes col-md-12">
   <header><h2>Keynotes</h2></header>
-  <p>We are preparing the best Keynotes ever in a Plone Conference. This year we will have up to 6 Keynotes, one in the morning and one in the evening of each day. These are the confirmed keynoters so far:</p>
+  <p>This year we have six keynotes, one in the morning and one in the evening of each day:</p>
   <div class="row">
     <tal:repeat repeat="keynoter view/get_keynoters">
       <div class="col-md-6">
