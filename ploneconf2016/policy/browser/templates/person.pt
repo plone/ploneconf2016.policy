@@ -34,7 +34,7 @@
             </tal:github>
               <tal:email tal:condition="view/can_view_email">
 		<span>&nbsp;</span><span> | <span>&nbsp;</span>
-		<span>Email: </span><span><a href="#" tal:attributes="href python:'mailto:'+context.email" tal:content="here/email">[email]</a></span>
+		<span>Email: </span><span><a href="#" tal:attributes="href python:'mailto:'+(context.email or '')" tal:content="here/email">[email]</a></span>
             </tal:email>
             </b>
           </h4>

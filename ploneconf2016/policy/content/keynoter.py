@@ -1,5 +1,7 @@
 from plone.supermodel import model
 from Products.Five import BrowserView
+from AccessControl import getSecurityManager
+from Products.CMFCore.permissions import ModifyPortalContent
 
 
 class IKeynoter(model.Schema):
@@ -37,3 +39,8 @@ class KeynoterView(BrowserView):
         if self.context.twitter_handle or self.context.github_handle:
             return True
         return False
+
+    def can_view_email(self):
+        sm = getSecurityManager()
+        return sm.checkPermission(ModifyPortalContent, self.context)
+
