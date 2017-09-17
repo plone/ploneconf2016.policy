@@ -14,8 +14,12 @@
   <p class="TileDescription">${content/description|nothing}</p>
   <div class="training-byline">
     <tal:cond condition="python: content.portal_type == 'training_class'">
-      Duration: <strong tal:content="view/duration"></strong> |
+      Duration: <strong tal:content="view/duration"></strong>
     </tal:cond>
+    <tal:cond condition="python: content.portal_type == 'presentation'">
+      <strong tal:content="view/duration"></strong>
+    </tal:cond>
+    |
     Audience: <strong tal:repeat="audience content/audience|python:()" class="AudienceBadge audience-${python:audience.lower()}">${audience}</strong> |
     Level: <strong tal:condition="content/level|nothing" class="LevelBadge level-${python:content.level.lower()}">${content/level}</strong>
   </div>

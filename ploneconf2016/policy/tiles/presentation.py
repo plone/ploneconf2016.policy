@@ -61,4 +61,10 @@ class PresentationTile(Tile):
                 return '1 day'
             elif duration == 'HalfDay':
                 return '1/2 day'
+            elif duration == 'LongTalk':
+                return 'Long Talk'
+            elif duration == 'ShortTalk':
+                return 'Short Talk'
+            elif duration == 'Demo':
+                return 'Demo'
         return ''
