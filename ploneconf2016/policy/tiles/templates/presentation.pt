@@ -12,8 +12,8 @@
     </tal:speaker-link>
   </p>
   <p class="TileDescription">${content/description|nothing}</p>
-  <div class="training-byline">
-    <tal:cond condition="python: content.portal_type == 'presentation'">
+  <div class="training-byline" tal:define="tracks view/tracks">
+    <tal:cond condition="python: len(tracks) > 0 and content.portal_type == 'presentation'">
       Track: <tal:tracks repeat="track view/tracks"><strong>${track}</strong><tal:comma condition="not: repeat/track/end">,</tal:comma> </tal:tracks> |
     </tal:cond>
     <tal:cond condition="python: content.portal_type == 'training_class'">
