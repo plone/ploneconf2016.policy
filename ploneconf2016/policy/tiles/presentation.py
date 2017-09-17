@@ -68,3 +68,8 @@ class PresentationTile(Tile):
             elif duration == 'Demo':
                 return 'Demo'
         return ''
+
+    def tracks(self):
+        subjects = self.content_context.subject
+        track_subjects = [s for s in subjects if s in ['Plone', 'Python Web', 'Modern JavaScript']]
+        return track_subjects
