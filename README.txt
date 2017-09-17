@@ -1,4 +1,5 @@
-Used on the Plone Conference 2016 (2016.ploneconf.org) web site.
+Developed for use on the Plone Conference 2016 (2016.ploneconf.org) web site.
+Also in use on the Plone Conference 2017 (2017.ploneconf.org) site.
 
 Installs add-ons needed for the site, primarily:
 
