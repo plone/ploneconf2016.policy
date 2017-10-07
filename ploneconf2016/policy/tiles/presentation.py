@@ -73,3 +73,20 @@ class PresentationTile(Tile):
         subjects = self.content_context.subject
         track_subjects = [s for s in subjects if s in ['Plone', 'Python Web', 'Modern JavaScript']]
         return track_subjects
+
+    def get_track_color(self):
+        subjects = self.content_context.subject
+        track_subjects = [s for s in subjects if s in ['Plone', 'Python Web', 'Modern JavaScript']]
+        class_name = ''
+        if 'Plone' in track_subjects:
+            class_name = class_name + 'blue'
+        if 'Python Web' in track_subjects:
+            if len(class_name) > 0:
+                class_name = class_name + ' '
+            class_name = class_name + 'red'
+        if 'Modern JavaScript' in track_subjects:
+            if len(class_name) > 0:
+                class_name = class_name + ' '
+            class_name = class_name + 'green'
+
+        return class_name

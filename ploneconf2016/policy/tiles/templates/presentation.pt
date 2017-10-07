@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-<article class="PresentationTile presentation-${python:content.duration and content.duration.lower()}" tal:define="content nocall:view/content_context|nothing"
+<article class="PresentationTile ${view/get_track_color} presentation-${python:content.duration and content.duration.lower()}" tal:define="content nocall:view/content_context|nothing"
      tal:condition="nocall:content">
   <h3 class="TileTitle">${content/title}</h3>
   <p class="TileAuthor" tal:define="speakers view/speaker" tal:condition="speakers|nothing">
