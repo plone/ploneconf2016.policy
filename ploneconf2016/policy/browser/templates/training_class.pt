@@ -27,7 +27,16 @@
             </span>
         </h4>
         <div tal:condition="context/body" tal:content="structure context/body/output" ></div>
-
+	<div class="col-xs-12">
+    	  <h4>
+            <strong>When:</strong>
+    	      <span>From</span> <span tal:replace="structure view/w/IEventBasic.start/render" />
+    	      <span>to</span> <span tal:replace="structure view/w/IEventBasic.end/render" />
+    	  </h4>
+    	  <h4 tal:condition="view/w/IEventLocation.location">
+    	    <strong>Location:</strong> <span tal:replace="structure view/w/IEventLocation.location/render" />
+    	  </h4>
+	</div>
     </metal:block>
 
 </html>

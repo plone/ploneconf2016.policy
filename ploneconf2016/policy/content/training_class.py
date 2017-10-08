@@ -1,7 +1,7 @@
 from plone import api
 from plone.indexer.decorator import indexer
 from plone.supermodel import model
-from Products.Five import BrowserView
+from plone.dexterity.browser.view import DefaultView
 from .vocabularies import TRAINING_CLASS_DURATION_TYPES, LEVEL_TYPES, \
 AUDIENCE_TYPES
 
@@ -9,7 +9,7 @@ class ITrainingClass(model.Schema):
     model.load('models/training_class.xml')
 
 
-class TrainingClassView(BrowserView):
+class TrainingClassView(DefaultView):
 
     def duration_vocab(self):
         return TRAINING_CLASS_DURATION_TYPES
