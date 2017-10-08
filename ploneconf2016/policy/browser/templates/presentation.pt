@@ -37,8 +37,7 @@
     <div class="col-xs-12">
       <div tal:condition="context/body" tal:content="structure context/body/output" ></div>
     </div>
-    <div class="col-xs-12"
-         tal:condition="python: 'Keynote' in context.subject">
+    <div class="col-xs-12">
     	<h4>
         <strong>When:</strong>
     	  <a href="" tal:omit-tag="not: here/schedule_url" tal:attributes="href here/schedule_url">
