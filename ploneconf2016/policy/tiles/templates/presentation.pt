@@ -3,7 +3,7 @@
 <body>
 <article class="PresentationTile ${view/get_track_color} presentation-${python:content.duration and content.duration.lower()}" tal:define="content nocall:view/content_context|nothing"
      tal:condition="nocall:content">
-  <h3 class="TileTitle">${content/title}</h3><a id="${content/id}"></a>
+  <h3 class="TileTitle"><a id="${content/id}" title="${content/Title}" href="${content/absolute_url}">${content/title}</a></h3>
 
   <p class="TileAuthor" tal:define="speakers view/speaker" tal:condition="speakers|nothing">
     by
@@ -24,9 +24,6 @@
     Audience: <strong tal:repeat="audience content/audience|python:()" class="AudienceBadge audience-${python:audience.lower()}">${audience}</strong> |
     Level: <strong tal:condition="content/level|nothing" class="LevelBadge level-${python:content.level.lower()}">${content/level}</strong>
   </div>
-  <a class="TileLink" title="${content/Title}" href="${content/absolute_url}">
-    More information...
-  </a>
 </article>
 </body>
 </html>
