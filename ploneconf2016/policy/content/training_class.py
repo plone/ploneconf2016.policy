@@ -27,7 +27,8 @@ class TrainingClassView(DefaultView):
         instructors = [api.content.get(UID=x) for x in instructor_set]
         instructor_data = []
         for x in instructors:
-            instructor_data.append({'url':x.absolute_url(), 'name': x.title})
+            if x:
+                instructor_data.append({'url':x.absolute_url(), 'name': x.title})
         return instructor_data
 
     def vocab_title(self, values, vocab):
