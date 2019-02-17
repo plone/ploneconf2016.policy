@@ -8,8 +8,10 @@
   <p class="TileAuthor" tal:define="speakers view/speaker" tal:condition="speakers|nothing">
     by
     <tal:speaker-link repeat="speaker speakers">
+     <tal:speaker cond="speaker">
       <a href="${speaker/absolute_url}">${speaker/Title}</a>
       <tal:comma condition="not: repeat/speaker/end">,</tal:comma>
+     </tal:speaker>
     </tal:speaker-link>
   </p>
   <p class="TileDescription">${content/description|nothing}</p>
