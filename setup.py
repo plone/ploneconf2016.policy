@@ -12,7 +12,7 @@ long_description = '\n\n'.join([
 ])
 
 setup(name='ploneconf2016.policy',
-      version='0.1',
+      version='1.0',
       description="Policy product for Plone Conference 2106 website",
       long_description=long_description,
       # Get more strings from
