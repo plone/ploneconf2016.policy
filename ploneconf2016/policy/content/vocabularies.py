@@ -41,7 +41,7 @@ def persons(context):
         terms.append(SimpleTerm(
             value=brain.UID,
             token=token,
-            title=brain.Title.decode('utf8')
+            title=brain.Title
             ))
     return SimpleVocabulary(terms)
 directlyProvides(persons, IContextSourceBinder)
