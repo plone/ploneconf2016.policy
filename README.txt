@@ -1,9 +1,12 @@
-Developed for use on the Plone Conference 2016 (2016.ploneconf.org) web site.
-Also in use on the Plone Conference 2017 (2017.ploneconf.org) site.
+Developed for use on these Plone Conference sites:
+
+- 2016.ploneconf.org
+- 2017.ploneconf.org
+- 2018.ploneconf.org
 
 Installs add-ons needed for the site, primarily:
 
-- PloneFormGen
+- easyform
 - Mosaic
 - social networking sharing
 

@@ -2,8 +2,7 @@
 <metadata>
   <version>1005</version>
   <dependencies>
-    <dependency>profile-Products.PloneFormGen:default</dependency>
-    <dependency>profile-Products.RedirectionTool:default</dependency>
+    <dependency>profile-collective.easyform:default</dependency>
     <dependency>profile-collective.addthis:default</dependency>
     <dependency>profile-plone.app.mosaic:default</dependency>
     <dependency>profile-plone.app.dexterity:default</dependency>
