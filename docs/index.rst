@@ -41,9 +41,7 @@ Required Add-ons
 The following add-ons are pulled in by this policy product:
 
 - collective.easyform
-- collective.addthis
 - plone.app.mosaic
-- collective.relatedslider
 
 URL of Schedule Tile
 --------------------
@@ -55,46 +53,6 @@ breaks, open spaces, meetings, and so on).
 
 In the Presentation content type, the `schedule_url` field, if set, lets a visitor click through to the presentation's
 tile in the schedule page.
-
-Related Slider
---------------
-
-The related slider fields in Presentation and Training Class content types are not currently used on any of the live
-conference sites (2016, 2017, 2018), but they are intended to show links to other related site content defined manually
-or via collection criteria.
-
-
-Deployment
-==========
-
-
-The production server currently runs Plone 5.0.7.
-
-
-Add-ons
--------
-
-The following add-ons are in the `buildout.cfg` on the Linode server:
-
-  - "ploneconf2016.policy = git https://github.com/plone/ploneconf2016.policy.git"
-  - "ploneconf2017.theme = git https://github.com/sneridagh/ploneconf2017.theme.git"
-  - "collective.relatedslider = git https://github.com/collective/collective.relatedslider.git"
-  - uwosh.pfg.d2c
-  - collective.recaptcha
-  - Products.PloneHotfix20171128
-
-Sites Served
-------------
-
-The Linode currently serves the following sites:
-
-- 2015.ploneconf.org (served statically by `nginx`, exported from Plone via `wget`)
-- 2016.ploneconf.org (will be exported statically soon)
-- 2017.ploneconf.org (will be exported statically soon)
-- 2018.ploneconf.org (will be exported statically ~February 2019)
-- 2019.ploneconf.org (new clone)
-
-
 
 How to Create a New Conference Site
 ===================================

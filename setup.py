@@ -53,9 +53,7 @@ setup(name='ploneconf2016.policy',
           'plone.restapi',
           'plone.app.dexterity',
           'collective.easyform',
-          'collective.addthis',
           'plone.app.mosaic',
-          'collective.relatedslider',
       ],
       extras_require={
           'test': [

@@ -23,7 +23,6 @@
   <element value="plone.app.dexterity.behaviors.metadata.ICategorization"/>
   <element value="plone.app.content.interfaces.INameFromTitle"/>
   <element value="plone.app.relationfield.behavior.IRelatedItems"/>
-  <element value="collective.relatedslider.behavior.IRelatedSlider"/>
   <element value="plone.app.contenttypes.behaviors.collection.ICollection"/>
  </property>
  <property name="schema">ploneconf2016.policy.content.person.IPerson</property>
