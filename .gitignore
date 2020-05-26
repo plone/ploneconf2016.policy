@@ -19,6 +19,7 @@ src/*
 dist/*
 test.plone_addon/
 var/
+.eggs
 # files
 .installed.cfg
 .mr.developer.cfg
