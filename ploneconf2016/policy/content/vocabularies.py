@@ -30,6 +30,13 @@ AUDIENCE_TYPES = SimpleVocabulary(
      SimpleTerm(value=u'Developer', title=u'Developer')]
     )
 
+PRESENTATION_TRACKS = SimpleVocabulary(
+    [SimpleTerm(value=u'Track 1', title=u'Track 1'),
+     SimpleTerm(value=u'Track 2', title=u'Track 2'),
+     SimpleTerm(value=u'Track 3', title=u'Track 3'),
+     SimpleTerm(value=u'French Track', title=u'French Track')]
+    )
+
 def persons(context):
     catalog = api.portal.get_tool('portal_catalog')
     person_brains = catalog(portal_type=('person', 'keynoter'),

@@ -74,5 +74,11 @@
       <title>Schedule</title>
       <required>False</required>
     </field>
+    <field name="track" type="zope.schema.Choice">
+      <description>Presentation track</description>
+      <required>True</required>
+      <title>Track</title>
+      <source>ploneconf2016.policy.content.vocabularies.PRESENTATION_TRACKS</source>
+    </field>
   </schema>
 </model>

@@ -3,7 +3,7 @@ from plone.indexer.decorator import indexer
 from plone.supermodel import model
 from plone.dexterity.browser.view import DefaultView
 from .vocabularies import PRESENTATION_DURATION_TYPES, LEVEL_TYPES, \
-AUDIENCE_TYPES
+AUDIENCE_TYPES, PRESENTATION_TRACKS
 
 class IPresentation(model.Schema):
     model.load('models/presentation.xml')
@@ -19,6 +19,9 @@ class PresentationView(DefaultView):
 
     def audience_vocab(self):
         return AUDIENCE_TYPES
+
+    def tracks_vocab(self):
+        return PRESENTATION_TRACKS
 
     def speakers(self):
         """ parse speaker set into something template can iterate over
