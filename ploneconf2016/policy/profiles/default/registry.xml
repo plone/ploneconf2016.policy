@@ -158,4 +158,29 @@
     <value key="rich_text">false</value>
     <value key="weight">70</value>
   </records>
+
+  <records interface="plone.app.querystring.interfaces.IQueryField"
+           prefix="plone.app.querystring.field.track">
+    <value key="title">Track</value>
+    <value key="description">A custom index</value>
+    <value key="enabled">True</value>
+    <value key="sortable">False</value>
+    <value key="operations">
+      <element>plone.app.querystring.operation.string.is</element>
+      <element>plone.app.querystring.operation.string.contains</element>
+    </value>
+    <value key="group">Metadata</value>
+  </records>
+
+  <record name="plone.app.standardtiles.listing_views">
+    <field type="plone.registry.field.Dict">
+      <title>Listing Views</title>
+      <key_type type="plone.registry.field.TextLine" />
+      <value_type type="plone.registry.field.TextLine" />
+    </field>
+    <value purge="false">
+      <element key="tile_talk_view">Talk view</element>
+    </value>
+  </record>
+
 </registry>

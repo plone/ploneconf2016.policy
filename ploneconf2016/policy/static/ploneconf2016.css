@@ -15,3 +15,24 @@
     min-width: 150px;
     width: 160px;
 }
+
+.talks-tile .title {
+    font-size: 20px;
+    color: #004464;
+}
+.talks-tile p {
+    margin-top: 10px;
+  }
+.level-tag {
+    padding: 3px 5px;
+    border-radius: 4px;
+}
+.level-tag.Expert {
+    background-color: rgba(255, 150, 150, 0.4);
+}
+.level-tag.Beginner {
+    background-color: rgba(150, 255, 150, 0.4);
+}
+.level-tag.Intermediate {
+    background-color: rgba(150, 150, 255, 0.4);
+}

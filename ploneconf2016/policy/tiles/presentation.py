@@ -5,6 +5,7 @@ from plone.memoize.view import memoize
 from plone.supermodel import model
 from plone.tiles import Tile
 from plone.uuid.interfaces import IUUID
+from Products.Five import BrowserView
 from zope import schema
 from zope.schema.vocabulary import SimpleVocabulary
 
@@ -90,3 +91,15 @@ class PresentationTile(Tile):
             class_name = class_name + 'green'
 
         return class_name
+
+
+class Utils(BrowserView):
+
+    def __init__(self, context, request):
+        self.context = context
+        self.request = request
+
+    def pres_speakers(self, item):
+        speaker_uids = getattr(item, 'speaker', None)
+        if speaker_uids:
+            return [uuidToObject(u) for u in speaker_uids]

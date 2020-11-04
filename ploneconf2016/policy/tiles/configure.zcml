@@ -38,6 +38,22 @@
     add_permission="cmf.ModifyPortalContent"
     permission="zope.Public"
     template="templates/keynoters.pt"
-    />
+    /> 
+    
+  <!-- content listing tile template -->
+  <browser:page
+      name="tile_talk_view"
+      for="*"
+      layer="plone.app.standardtiles.contentlisting.IContentListingTileLayer"
+      permission="zope2.View"
+      template="templates/tile_talk_view.pt"
+      />
+
+  <browser:page
+      name="utils"
+      for="*"
+      permission="zope2.View"
+      class=".presentation.Utils"
+      />
 
 </configure>
