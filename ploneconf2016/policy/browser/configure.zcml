@@ -50,4 +50,12 @@
       permission="zope2.View"
       />
 
+  <!-- CSV download of schedule/speakers -->
+  <browser:page
+    name="schedule_csv"
+    for="*"
+    permission="zope2.View"
+    class=".download.ScheduleCSV"
+    />
+
 </configure>
