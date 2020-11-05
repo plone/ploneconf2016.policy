@@ -18,8 +18,8 @@
                     </a><br />
                     <tal:speaker-link repeat="speaker speakers">
                         <tal:speaker condition="speaker">
-                        <a href="${speaker/absolute_url}">${speaker/Title}</a>
-                        <tal:comma condition="not: repeat/speaker/end">,</tal:comma>
+                        <a href="${speaker/absolute_url}">${speaker/Title}</a
+                        ><tal:comma condition="not: repeat/speaker/end">,</tal:comma>
                         </tal:speaker>
                     </tal:speaker-link>
                     <p>
