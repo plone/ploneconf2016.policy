@@ -13,7 +13,7 @@ LOGO_SIZES = {
     "gold": 300,
     "silver": 240,
     "bronze": 150,
-    "supporting": 90,
+    "supporting": 120,
 }
 
 
