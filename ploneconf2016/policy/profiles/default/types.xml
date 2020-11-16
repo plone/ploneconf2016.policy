@@ -11,4 +11,5 @@
   <object name="keynoter" meta_type="Dexterity FTI" />
   <object name="presentation" meta_type="Dexterity FTI" />
   <object name="training_class" meta_type="Dexterity FTI" />
+  <object name="sponsor" meta_type="Dexterity FTI" />
 </object>

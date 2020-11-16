@@ -37,6 +37,17 @@ PRESENTATION_TRACKS = SimpleVocabulary(
      SimpleTerm(value=u'French Track', title=u'French Track')]
     )
 
+SPONSORSHIP_LEVELS = SimpleVocabulary(
+    [
+        SimpleTerm(value=u'diamond', title=u'Diamond'),
+        SimpleTerm(value=u'platinum', title=u'Platinum'),
+        SimpleTerm(value=u'gold', title=u'Gold'),
+        SimpleTerm(value=u'silver', title=u'Silver'),
+        SimpleTerm(value=u'bronze', title=u'Bronze'),
+        SimpleTerm(value=u'supporting', title=u'Supporting'),
+    ]
+)
+
 def persons(context):
     catalog = api.portal.get_tool('portal_catalog')
     person_brains = catalog(portal_type=('person', 'keynoter'),

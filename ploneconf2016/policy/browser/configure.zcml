@@ -4,16 +4,6 @@
     xmlns:zcml="http://namespaces.zope.org/zcml"
     xmlns:z3c="http://namespaces.zope.org/z3c">
 
-<configure
-    xmlns="http://namespaces.zope.org/zope"
-    xmlns:five="http://namespaces.zope.org/five"
-    xmlns:i18n="http://namespaces.zope.org/i18n"
-    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
-    xmlns:plone="http://namespaces.plone.org/plone"
-    i18n_domain="ploneconf2016.policy">
-
-</configure>
-
   <!-- Training Class -->
   <browser:page
       name="view"
@@ -57,5 +47,14 @@
     permission="zope2.View"
     class=".download.ScheduleCSV"
     />
+
+  <!-- Sponsor -->
+  <browser:page
+      name="view"
+      for="ploneconf2016.policy.content.sponsor.ISponsor"
+      class="ploneconf2016.policy.content.sponsor.SponsorView"
+      template="templates/sponsor.pt"
+      permission="zope2.View"
+      />
 
 </configure>
