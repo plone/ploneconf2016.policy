@@ -22,7 +22,7 @@
                         ><tal:comma condition="not: repeat/speaker/end">,</tal:comma>
                         </tal:speaker>
                     </tal:speaker-link>
-                    <p>
+                    <p tal:condition="python:item.level or item.audience">
                         <span class="level-tag ${item/level}">${item/level}</span> |
                         <tal:aud repeat="aud item/audience">
                             <span class="audience-tag ${aud}">${aud}</span

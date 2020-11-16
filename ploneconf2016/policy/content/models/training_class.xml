@@ -22,7 +22,7 @@
       <required>False</required>
       <title>Body</title>
     </field>
-    <field name="instructor" type="zope.schema.Set">
+    <field name="speaker" type="zope.schema.Set">
       <description>Instructor</description>
       <title>Instructor(s)</title>
       <value_type type="zope.schema.Choice">
