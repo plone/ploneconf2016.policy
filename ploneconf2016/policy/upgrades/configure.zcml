@@ -50,4 +50,6 @@
 
   <include package=".v20201116001" />
 
+  <include package=".v20201129001" />
+
 </configure>
